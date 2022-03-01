@@ -1,0 +1,74 @@
+@keyframes spin {
+    0% {transform: rotate(0deg);
+        left: 100px;
+        bottom: 50px;}
+    16% {transform: rotate(60deg);
+        left: 75px;
+        bottom: 93.30px;}
+    33% {transform: rotate(120deg);
+        left: 25px;
+        bottom: 93.30px;}
+    50% {transform: rotate(180deg);
+        left: 0px;
+        bottom: 50px;}
+    66% {transform: rotate(240deg);
+        left: 25px;
+        bottom: 6.70px;}
+    83% {transform: rotate(300deg);
+        left: 75px;
+        bottom: 6.70px;}
+    100% {transform: rotate(360deg);
+        left: 100px;
+        bottom: 50px;}
+}
+
+@keyframes load {
+    0% {background-color: red;
+        width: 5%;}
+    100% {background-color: limegreen;
+        width: 100%;
+        opacity:5%}
+}
+
+body {
+    background-color: lightgray;
+    width: 1920px;
+    height: 1080px;
+}
+
+div.spinner {
+    background-color: white;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+}
+
+img {
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+    height: 50px;
+    width: 50px;
+    animation: spin 1s linear infinite;
+}
+
+div.loader {
+    background-color: white;
+    position: absolute;
+    top: 200px;
+    width: 400px;
+    height: 30px;
+    border: 2px solid black
+}
+
+div.bar {
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+    width: 5%;
+    background-color: blue;
+    animation: load 2s infinite ease-in-out alternate
+}
